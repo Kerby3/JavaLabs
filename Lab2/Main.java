@@ -22,6 +22,10 @@ public class Main {
         double[][] arr41 = {{1, 2}, {3, 4}, {5, 6}};
         double[][] outputArr41 = lab4(arr41);
         System.out.println("Lab4:");
+        for (double[] rows: arr41) {
+            System.out.println(Arrays.toString(rows));
+        }
+        System.out.println(" ");
         for (double[] rows: outputArr41) {
             System.out.println(Arrays.toString(rows));
         }
@@ -37,8 +41,13 @@ public class Main {
         System.out.println("Lab7: " + Arrays.toString(lab7(arr71)) + "\n");
 
         double[][] arr81 = {{1, 2, 3}, {4, 5, 6}};
+
         double[][] outputArr81 = lab8(arr81);
         System.out.println("Lab8:");
+        for (double[] rows: arr81) {
+            System.out.println(Arrays.toString(rows));
+        }
+        System.out.println(" ");
         for (double[] rows: outputArr81) {
             System.out.println(Arrays.toString(rows));
         }
@@ -159,7 +168,7 @@ public class Main {
         double[][] arrTransform = new double[arr[0].length][arr.length];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
-                arrTransform[j][arr.length - 1 - i] = arr[i][j];
+                arrTransform[arr[0].length - 1 - j][i] = arr[i][j];
             }
         }
         return arrTransform;
